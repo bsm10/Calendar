@@ -108,7 +108,6 @@ namespace Calendar
             FillLabel(label34, startDate);
             FillLabel(label35, startDate);
         }
-
         private void FillLabel(Label l, DateTime startDate)
         {
             DateTime dt = startDate.AddDays(i);
@@ -122,6 +121,13 @@ namespace Calendar
             {
                 l.ForeColor = dt.Month != current_month ? Color.Gray : Color.Black;
             }
+
+            if(dt.Date==DateTime.Now.Date) 
+            {
+                l.BackColor = Color.DarkBlue;
+                l.ForeColor = Color.Cyan;
+            }
+
             i++;
         }
     }
