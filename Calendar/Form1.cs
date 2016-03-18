@@ -72,47 +72,21 @@ namespace Calendar
             }
             i = 0;
             DateTime startDate = _date.Subtract(TimeSpan.FromDays(delta));
-            FillLabel(label1, startDate);
-            FillLabel(label2,startDate);
-            FillLabel(label3,startDate);
-            FillLabel(label4,startDate);
-            FillLabel(label5,startDate);
-            FillLabel(label6, startDate);
-            FillLabel(label7, startDate);
-            FillLabel(label8, startDate);
-            FillLabel(label9, startDate);
-            FillLabel(label10, startDate);
-            FillLabel(label11, startDate);
-            FillLabel(label12, startDate);
-            FillLabel(label13, startDate);
-            FillLabel(label14, startDate);
-            FillLabel(label15, startDate);
-            FillLabel(label16, startDate);
-            FillLabel(label17, startDate);
-            FillLabel(label18, startDate);
-            FillLabel(label19, startDate);
-            FillLabel(label20, startDate);
-            FillLabel(label21, startDate);
-            FillLabel(label22, startDate);
-            FillLabel(label23, startDate);
-            FillLabel(label24, startDate);
-            FillLabel(label25, startDate);
-            FillLabel(label26, startDate);
-            FillLabel(label27, startDate);
-            FillLabel(label28, startDate);
-            FillLabel(label29, startDate);
-            FillLabel(label30, startDate);
-            FillLabel(label31, startDate);
-            FillLabel(label32, startDate);
-            FillLabel(label33, startDate);
-            FillLabel(label34, startDate);
-            FillLabel(label35, startDate);
+            for (int row = 2; row < 7; row++)
+            {
+                for (int col = 0; col < 7; col++)
+                {
+                    Label lb = (Label)tableLayoutPanel.GetControlFromPosition(col, row);
+                    FillLabel(lb, startDate);
+                }
+            }
         }
         private void FillLabel(Label l, DateTime startDate)
         {
             DateTime dt = startDate.AddDays(i);
             l.Text = dt.Day.ToString();
             l.Tag = dt.Date.ToString("dd.MM.yyyy");
+            l.BackColor = Color.LightGray;
             if (dt.DayOfWeek == DayOfWeek.Sunday | dt.DayOfWeek == DayOfWeek.Saturday)
             {
                 l.ForeColor = dt.Month != current_month ? Color.RosyBrown : Color.Red;
@@ -121,14 +95,13 @@ namespace Calendar
             {
                 l.ForeColor = dt.Month != current_month ? Color.Gray : Color.Black;
             }
-
             if(dt.Date==DateTime.Now.Date) 
             {
                 l.BackColor = Color.DarkBlue;
                 l.ForeColor = Color.Cyan;
             }
-
             i++;
         }
+
     }
 }
