@@ -1,0 +1,9 @@
+D:\Proj\Calendar\Calendar\bin\Debug\Calendar.exe
+D:\Proj\Calendar\Calendar\bin\Debug\Calendar.pdb
+D:\Proj\Calendar\Calendar\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Proj\Calendar\Calendar\obj\x86\Debug\Calendar.Form1.resources
+D:\Proj\Calendar\Calendar\obj\x86\Debug\Calendar.Properties.Resources.resources
+D:\Proj\Calendar\Calendar\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Proj\Calendar\Calendar\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Proj\Calendar\Calendar\obj\x86\Debug\Calendar.exe
+D:\Proj\Calendar\Calendar\obj\x86\Debug\Calendar.pdb
